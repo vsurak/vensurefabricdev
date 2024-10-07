@@ -40,12 +40,21 @@ Fabric comes with 7 experiences
 - data exploration, preparation of cleansing to experiment, modeling, model scoring, service predictive insights to powerbi
 - notebook
 - experiments
+- ML models
 
-5. Synapse real time analytics
+5. Synapse real time analytics 
 
-6. Power BI
+- ingest, manage and analyze real time event data
+- KQL database, eventstream, KQL queryset
+
+6. Power BI 
+
+- reports and visual
+- report, semantic model
 
 7. Data Activator
+- automatically taking actions when patterns or condtions are met in changing data
+- reflex
 
 ## the 3 data stores
 
