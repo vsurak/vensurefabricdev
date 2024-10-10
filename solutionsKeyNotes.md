@@ -71,3 +71,74 @@ Meeting with Daniel Arledge, existing data PROJECT
 - clientspace maybe melissa can help us to get access
 - in snowflake like 30 tables with 6 millions records, sam knows better
 - 
+
+
+# Arquitectura Vensure Meeting
+
+## del diagrama general que había hecho Leo antes
+- sources: external websites laws y regulations, salesforce, docs en onedrive, plexity, pdf, excels
+- outputs: snowflake, clientspace sql
+
+## Oscar Esau 
+
+### automatic client inbound process 
+- para este punto no estarían ocupando integrar nada con onelake.
+
+## david cermeno - 
+### M&A + inbound employee benefits analysis tool 
+- FE en angular que deposita files en por medio de azure functions
+- entran archivos directamente en onelake, son pdf, csv y excel
+- spike para saber si openai o azure documents Ai
+- de la AI meten a data warehouse de onelake
+- desde warehouse es donde crean las salidas
+
+### monthly census automation
+- subida de files a onelake
+- se dispara que se subio un file y eso dispara un pipeline
+- ese pipeline llama a la AI que podria ser chatgpt o el de azure
+- se manda un email
+- el pipeline manda a prism y tambien ocupa leer de prism
+- el pipeline manda y escribe a warehouse
+- asumen que se extrae la info de prism por api
+- el mismo pipeline mete y saca info del datawarehouse
+- version de skateboard iba a ser consumir puro excel
+- 
+
+## mauricio araneda
+### tax jurisdiction monitor
+- aun non tienen claridad de donde sale la info para el proyecto
+
+### code mapping integration assistant
+- quieren tomar info del api de prism, son 4 fuentes diferentes del mismo api
+- para meter en onelike ocupan parametros, setup de algun maping con AI que lo harian con un .net funcion service, o sea van a crear un api
+- de onelake debe salir el codemaping para tener codigos unificados, este formato de tabla lo tienen claro
+- 
+
+## adolfo alcaraz
+### client employer assignment optimizer
+- fuentes prismhr, clientspace crm, UI y saca unstructured data
+- hay data semiestructurada
+- la info debe ser cargada en onelake 
+- esto va a ser consumido por powerbi
+- la no estructurada puede ser leyes y cosas textuales
+
+## nicolas locatti
+### Ai virtual assistant for SMB WSE guidance and support
+- ingesta de documentos para un bot, esos documentos entran por onelake y serían en flat
+- ingesta por web scrapping, pdf
+- hay documentacion que tienen solo en videos hay que hacer transcribe
+
+## andres mora
+### sales dashboard
+- este va a quedar pendiente 
+
+### client behavior analysis
+- clientspace api o azure sql, alguna de esas fuentes y de ahi pasa a onelake
+- synapse analytics para sacar la info y de ahi pasa a synapse data warehousing
+- 
+
+
+==================================
+
+hay varias salidas de powerbi, se va a ocupar cierto nivel de permisos en los datos aunque sea mínimo
+
