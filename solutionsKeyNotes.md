@@ -142,3 +142,8 @@ Meeting with Daniel Arledge, existing data PROJECT
 
 hay varias salidas de powerbi, se va a ocupar cierto nivel de permisos en los datos aunque sea mínimo
 
+reunion arquitectura con vensure y leads
+- actualmente no tienen forma de sacar la data necesaria from clientspace
+- powerapps and powerbi have a few licencies not cross organization
+- creen que tratar de sacar api de prism es para mucho más adelante insisten que mejor snowflake para skateboarding
+- 
