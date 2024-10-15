@@ -4,7 +4,8 @@
         "file": "SpreadSheet_Tabular_To_LakeHouseTable_TestData.xlsx",
         "sheet" : "Items",
         "destinationTable": "vensure_testtable01",
-        "loadTime": "09:00:00"
+        "loadTime": "09:00:00",
+        "pipelinehook" : "mipropriopipelinedesales"
     },
     {
         "path" : "config/taxes",
